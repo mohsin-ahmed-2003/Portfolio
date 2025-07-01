@@ -808,20 +808,69 @@ h1::after {
       }
     }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/* Global Box Sizing for better layout control */
-.center-container {
-    width: 80%; /* Or any specific width like 500px */
-    margin: 0 auto; /* This is the key: top/bottom margin 0, left/right margin auto */
-    text-align: left; /* You might want text left-aligned within the centered container */
+.contact-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
 }
 
-/* For the text inside the form to be left-aligned */
-.center-container h2 {
-    text-align: center; /* Center the heading within its container */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    font-size: 16px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+    border-color: #88B04B; /* A slightly darker green on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(136, 176, 75, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical; /* Allows vertical resizing of the textarea */
+}
+
+.send-button {
+    background-color: #90EE90; /* Light green */
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #7CFC00; /* A slightly brighter green on hover */
 }
