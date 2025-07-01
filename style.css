@@ -817,11 +817,6 @@ h1::after {
     max-width: 500px;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 25px;
-}
 
 .form-group {
     margin-bottom: 18px;
