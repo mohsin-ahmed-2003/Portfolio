@@ -843,14 +843,14 @@ h1::after {
 .form-group input[type="email"],
 .form-group input[type="tel"],
 .form-group textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
     /* Ensures padding doesn't affect total width */
     font-size: 16px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .form-group input[type="text"]:focus,
@@ -860,13 +860,13 @@ h1::after {
     border-color: #88B04B; /* A slightly darker green on focus */
     outline: none;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 50px;
     box-shadow: 0 0 5px rgba(136, 176, 75, 0.5);
 }
 
 .form-group textarea {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .send-button {
@@ -874,12 +874,12 @@ h1::after {
     color: white;
     padding: 14px 20px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 50px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    width: 100%;
+    width: 80%;
     transition: background-color 0.3s ease;
 }
 
