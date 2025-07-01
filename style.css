@@ -863,6 +863,8 @@ h1::after {
 }
 
 .form-group textarea {
+    margin-left: 20px;
+    margin-right: 20px;
     resize: vertical; /* Allows vertical resizing of the textarea */
 }
 
