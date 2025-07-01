@@ -847,7 +847,7 @@ h1::after {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    /* Ensures padding doesn't affect total width */
     font-size: 16px;
     margin-left: 20px;
     margin-right: 20px;
@@ -867,7 +867,6 @@ h1::after {
 .form-group textarea {
     margin-left: 20px;
     margin-right: 20px;
-    resize: vertical; /* Allows vertical resizing of the textarea */
 }
 
 .send-button {
