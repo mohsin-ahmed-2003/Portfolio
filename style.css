@@ -826,11 +826,15 @@ h1::after {
 
 .form-group {
     margin-bottom: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
     color: #555;
     font-weight: bold;
 }
@@ -845,6 +849,8 @@ h1::after {
     border-radius: 5px;
     box-sizing: border-box; /* Ensures padding doesn't affect total width */
     font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .form-group input[type="text"]:focus,
@@ -864,6 +870,8 @@ h1::after {
     background-color: #90EE90; /* Light green */
     color: white;
     padding: 14px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
