@@ -808,45 +808,190 @@ h1::after {
       }
     }
 
-  .contact-container {
-    display: flex; /* Makes the container a flex container */
-    justify-content: space-around; /* Distributes space evenly around items */
-    align-items: flex-start; /* Aligns items to the start of the cross-axis (top) */
-    padding: 10px; /* Add some padding around the sections */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+
+.contact-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
 }
 
-.get-in-touch,
-.send-us-a-message {
-    flex: 1; /* Allows both items to grow and shrink equally */
-    padding: 20px;
-    /* You might want to add a border or background for visual separation */
-    /* border: 1px solid #ccc; */
-    /* background-color: #f9f9f9; */
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
 }
 
-.get-in-touch {
-    margin-right: 20px; /* Add some space between the two sections */
+.contact-info h2,
+.contact-form h2 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
 }
 
-/* Basic styling for your form elements to make them look decent */
-.send-us-a-message form input,
-.send-us-a-message form textarea,
-.send-us-a-message form button {
-    display: block; /* Makes inputs and buttons take full width */
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: #f8fbfd;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.info-item h3 {
+    font-size: 1.3em;
+    color: #34495e;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.info-item p {
+    font-size: 1em;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 15px 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.send-us-a-message form button {
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px;
+}
+
+.contact-form .send-button {
     background-color: #007bff;
-    color: white;
-    cursor: pointer;
+    color: #fff;
+    padding: 15px 25px;
     border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    align-self: flex-start; /* Align button to the start of the flex container */
+    font-weight: 600;
 }
 
-.send-us-a-message form button:hover {
-    background-color: #0056b3;
+.contact-form .send-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+        min-width: unset; /* Remove min-width for smaller screens */
+        width: 100%;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 1.8em;
+    }
+
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .icon-wrapper {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .info-item h3 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 1.6em;
+    }
+
+    .info-item h3 {
+        font-size: 1.2em;
+    }
+
+    .info-item p {
+        font-size: 0.9em;
+    }
+
+    .contact-form .send-button {
+        width: 100%;
+        text-align: center;
+    }
 }
