@@ -11,7 +11,7 @@
 ### 3. And it also contain my Resume in <b>My Resume</b> button
 ![image](https://github.com/user-attachments/assets/e9a216aa-3363-47ae-b155-451c009d5f12)
 # About Section
-## It have Aesthetic Pic and Introduction about my and contact details 
+## It have Aesthetic Pic and Introduction about me and contact details 
 ![image](https://github.com/user-attachments/assets/28321838-413c-4047-b2a2-976c50a59ecf)
 # My Skills Section
 ## It shows my skills with percentage 
