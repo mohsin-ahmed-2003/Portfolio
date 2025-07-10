@@ -439,97 +439,6 @@ body {
   color: #bbb;
 }
 
-/* Responsive Navbar & Layout */
-@media (max-width: 991px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 60px 5%;
-  }
-
-  .hero-left,
-  .hero-right {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .hero-left {
-    margin-bottom: 40px;
-  }
-
-  .bg-skew {
-    display: none;
-  }
-
-  .navbar {
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #fff;
-    flex-direction: column;
-    width: 200px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    display: none;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  #menu-toggle:checked + .menu-icon + .nav-links {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .projects-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-card {
-    width: 95%;
-    height: 220px;
-  }
-
-  .footer h3 {
-    font-size: 20px;
-  }
-
-  .footer p {
-    font-size: 14px;
-  }
-
-  .social-icons a {
-    font-size: 18px;
-    margin: 0 8px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px;
-  }
-
-  .contact-form .btn {
-    width: 100%;
-  }
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 h1 {
@@ -570,12 +479,6 @@ h1::after {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 768px) {
-    .internship-card {
-        flex-direction: row; /* Row for larger screens */
-        align-items: flex-start; /* Align items at the start */
-    }
-}
 
 .internship-details {
     flex: 3; /* Takes more space */
@@ -621,11 +524,6 @@ h1::after {
     margin-top: 20px; /* Space from details on smaller screens */
 }
 
-@media (min-width: 768px) {
-    .certificate {
-        margin-top: 0; /* Remove top margin on larger screens */
-    }
-}
 
 .certificate img {
     max-width: 100%; /* Ensure image fits container */
@@ -639,27 +537,6 @@ h1::after {
 .certificate img:hover {
     transform: scale(1.03); /* Slight zoom on hover */
 }
-
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .container {
-        margin: 20px auto;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-        margin-bottom: 30px;
-    }
-
-    .internship-details {
-        padding-right: 0;
-    }
-
-    .certificate {
-        padding-left: 0;
-      }
-    }
 
     /*
    Note: This CSS assumes your page already has a dark background color.
@@ -774,39 +651,6 @@ h1::after {
     letter-spacing: 0.5px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .credits-heading {
-        font-size: 2.5em;
-    }
-
-    .credits-subheading {
-        font-size: 1em;
-        margin-bottom: 30px;
-    }
-
-    .certificate-grid {
-        grid-template-columns: 1fr; /* Stack cards on very small screens */
-        gap: 25px;
-    }
-
-    .certificate-card {
-        height: auto; /* Allow height to adjust on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .credits-heading {
-        font-size: 2em;
-    }
-    .credits-subheading {
-        font-size: 0.9em;
-    }
-    .certificate-card {
-        margin: 0 auto; /* Center single cards on extra small screens */
-        max-width: 300px; /* Limit width if stacked */
-      }
-    }
 
 .contact-container {
     background-color: #ffffff;
@@ -870,4 +714,225 @@ h1::after {
 
 .send-button:hover {
     background-color: #7CFC00; /* A slightly brighter green on hover */
+}
+
+
+@media (max-width: 768px) {
+  /* Navbar adjustments for tablets and smaller */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 80px; /* Below the navbar */
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show navigation links when active (toggled by JS) */
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on small screens */
+  }
+
+  /* Hero Section adjustments */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%; /* Adjust padding for smaller screens */
+    min-height: auto; /* Allow height to adjust based on content */
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: 1 1 100%; /* Make them take full width */
+    padding: 20px 0;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(2rem, 8vw, 3rem); /* Adjust font size for responsiveness */
+  }
+
+  .buttons {
+    justify-content: center; /* Center buttons */
+  }
+
+  .hero-right img {
+    width: 280px; /* Smaller image size */
+    height: 280px;
+    margin-top: 30px;
+  }
+
+  .bg-skew {
+    display: none; /* Hide the skewed background on smaller screens */
+  }
+
+  /* About Section adjustments */
+  .about-grid {
+    flex-direction: column; /* Stack image and content */
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 250px; /* Smaller image */
+    height: 350px;
+    margin-bottom: 30px;
+  }
+
+  .about-content {
+    padding: 0 10px;
+  }
+
+  .interests span {
+    margin-bottom: 10px; /* Add space between interests */
+  }
+
+  /* Skills Section adjustments */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller skill cards */
+  }
+
+  .skill-card {
+    padding: 15px 10px;
+    max-width: 140px;
+  }
+
+  .skill-icon {
+    width: 60px; /* Smaller icons */
+    height: 60px;
+  }
+
+  .skill-card h4 {
+    font-size: 16px;
+  }
+
+  /* Projects Section adjustments */
+  .project-card {
+    width: 90%; /* Make project cards wider for small screens */
+    max-width: 300px; /* Limit max-width */
+    height: 220px; /* Adjust height */
+  }
+
+  /* Internship Cards adjustments */
+  .internship-card {
+    flex-direction: column; /* Stack details and certificate */
+    padding: 20px;
+  }
+
+  .internship-details {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .internship-details h2 {
+    font-size: 1.5em;
+  }
+
+  .certificate {
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  /* Credits Section adjustments */
+  .credits-heading {
+    font-size: 2.2em;
+  }
+
+  .credits-subheading {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr; /* Single column for certificates */
+    padding: 0 10px;
+  }
+
+  .certificate-card {
+    width: 100%; /* Take full width on small screens */
+    height: auto; /* Adjust height dynamically */
+    max-width: 350px; /* Limit max-width if needed */
+    margin: auto; /* Center the card */
+  }
+
+  /* Contact Section adjustments */
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-form {
+    padding: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet-specific adjustments */
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 80px 8%;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+  }
+
+  .hero-right img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about-section {
+    padding: 50px 20px;
+  }
+
+  .about-grid {
+    gap: 30px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .project-card {
+    width: 250px;
+    height: 180px;
+  }
+
+  .internship-card {
+    flex-direction: row; /* Keep row layout for tablets */
+    align-items: center;
+  }
+
+  .internship-details {
+    padding-right: 20px;
+  }
+
+  .certificate {
+    padding-left: 20px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
